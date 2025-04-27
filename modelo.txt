@@ -1,0 +1,112 @@
+===============================
+MODELO ESTRUCTURAL DEL SISTEMA
+Gestión de Equipos y Jugadores
+===============================
+
+1. CLASES PRINCIPALES
+----------------------
+Entidades:
+- Equipo
+- Jugador
+- Torneo
+
+Control:
+- GestorEquipos
+- GestorJugadores
+
+Interfaz:
+- PantallaRegistroEquipo
+- PantallaAñadirJugador
+- PantallaConsultaEquiposJugadores
+
+------------------------------
+2. CLASES
+------------------------------
+
+ENTIDADES
+=========
+
+Clase: Equipo
+-------------
+Atributos:
+- id
+- nombre
+- ciudad
+- categoria
+- jugadores
+
+Métodos:
++ getters, setters, toString, etc...
+
+Clase: Jugador
+--------------
+Atributos:
+- idJugador
+- nombre
+- fechaNacimiento
+- posicion
+- numero
+
+Métodos:
++ getters, setters, toString, etc...
+
+Clase: Torneo
+-------------
+Atributos:
+- idTorneo
+- nombre
+- fechaInicio
+- fechaFin
+- equipos
+
+Métodos:
++ getters, setters, toString, etc...
+
+CONTROL
+=======
+
+Clase: GestorEquipo
+--------------------
+List<Equipo>
+
+Métodos:
++ registrarEquipo();
++ eliminarEquipo();
++ buscarEquipo();
++ buscarTodosEquipos();
++ actualizarEquipo();
+
+
+Clase: GestorJugador
+----------------------
+List<Jugador>
+List<Equipo>
+
+Métodos:
++ registrarJugador();
++ eliminarJugador();
++ actualizarJugador();
++ buscarJugador();
++ buscarTodosJugadores();
+
++ añadirJugadorAEquipo();
++ jugadoresPorEquipo();
+
+Clase: GestorTorneo
+--------------------
+List<Torneo>
+List<Equipo>
+
+Métodos:
++ registrarTorneo();
++ eliminarTorneo();
++ actualizarTorneo();
++ buscarTorneo();
++ buscarTodosTorneos();
+
++ agregarEquipo();
++ obtenerEquiposTorneo();
+
+==============================
+FIN DEL MODELO
+==============================
